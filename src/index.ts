@@ -4,19 +4,22 @@ import { BaseParams, HTTPMethods } from './types';
 import { HTTPError } from './HTTPError';
 
 // Base Fetcher
-export const createFettuccini = (baseUrl?: string, headers?: HeadersInit) => {
+export const createFettuccini = (baseUrl?: string, APIParams?: BaseParams) => {
     const api = async <T>(method: HTTPMethods, { stringifyBody = true, ...params }: BaseParams): Promise<T> => {
-        const query = params.qs ? `?${stringify(params.qs ?? {}, { arrayFormat: params.qsArrayFormat })}` : '';
+        const query = params.qs
+            ? `?${stringify(params.qs ?? {}, { arrayFormat: params.qsArrayFormat ?? APIParams?.qsArrayFormat })}`
+            : '';
 
         const data = fetch(`${baseUrl}${params.endpoint}${query}`, {
             headers: {
                 'Content-Type': 'application/json',
-                ...headers,
+                ...APIParams?.headers,
                 ...params.headers,
                 ...(params.auth ? { Authorization: params.auth } : {}),
             },
             method,
             body: stringifyBody ? JSON.stringify(params.body) : (params.body as BodyInit),
+            ...APIParams?.config,
             ...params.config,
         }).then(async (res) => {
             if (!res.ok) {
