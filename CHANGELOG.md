@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2-beta.2](https://github.com/j-dominguezp/fettuccine/compare/v0.0.2-beta.1...v0.0.2-beta.2) (2021-05-28)
+
+
+### Bug Fixes
+
+* **api creation:** removed endpoint and qs from base configuration ([0563872](https://github.com/j-dominguezp/fettuccine/commit/0563872d70d2056ffd17789477f2c21664a104e3))
+
 ### [0.0.2-beta.1](https://github.com/j-dominguezp/fettuccine/compare/v0.0.2-beta.0...v0.0.2-beta.1) (2021-05-28)
 
 
