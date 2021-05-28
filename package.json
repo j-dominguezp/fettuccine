@@ -1,5 +1,5 @@
 {
-    "name": "fettuccine",
+    "name": "fettuccini",
     "version": "0.0.1",
     "description": "Tiny wrapper around fetch",
     "main": "index.js",
