@@ -4,7 +4,7 @@ import { BaseParams, HTTPMethods } from './types';
 import { HTTPError } from './HTTPError';
 
 // Base Fetcher
-export const createFettuccini = (baseUrl?: string, APIParams?: BaseParams) => {
+export const createFettuccini = (baseUrl?: string, APIParams?: Omit<BaseParams, 'endpoint' | 'qs'>) => {
     const api = async <T>(method: HTTPMethods, { stringifyBody = true, ...params }: BaseParams): Promise<T> => {
         const query = params.qs
             ? `?${stringify(params.qs ?? {}, { arrayFormat: params.qsArrayFormat ?? APIParams?.qsArrayFormat })}`
