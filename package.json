@@ -1,6 +1,6 @@
 {
     "name": "fettuccini",
-    "version": "0.0.2-beta.2",
+    "version": "0.0.2-beta.3",
     "description": "Tiny wrapper around fetch",
     "main": "index.js",
     "types": "index.d.ts",

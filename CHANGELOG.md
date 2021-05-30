@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2-beta.3](https://github.com/j-dominguezp/fettuccine/compare/v0.0.2-beta.2...v0.0.2-beta.3) (2021-05-30)
+
+
+### Bug Fixes
+
+* **api service:** set undefined content type when content type is not json ([409abe7](https://github.com/j-dominguezp/fettuccine/commit/409abe7dd6c006e4af2624c30b2297c38a3529ca))
+
 ### [0.0.2-beta.2](https://github.com/j-dominguezp/fettuccine/compare/v0.0.2-beta.1...v0.0.2-beta.2) (2021-05-28)
 
 
