@@ -11,6 +11,6 @@ export interface BaseParams {
     headers?: HeadersInit;
     config?: Omit<RequestInit, 'method' | 'headers' | 'body'>;
     body?: BodyInit | object;
-    stringifyBody?: boolean;
+    isJSONBody?: boolean;
     auth?: string;
 }
